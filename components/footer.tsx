@@ -1,8 +1,8 @@
 "use client";
 
+import { navigation, siteConfig, socialLinks } from "@/constants/site";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
-import { siteConfig, socialLinks, navigation } from "@/constants/site";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -96,16 +96,16 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-12 border-t border-border pt-8"
         >
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+          <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 md:flex-row">
             <p className="text-sm text-muted-foreground">
               © {currentYear} {siteConfig.name}. All rights reserved.
             </p>
 
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>Made with</span>
               <Heart className="h-4 w-4 text-red-500" />
               <span>using Next.js & TypeScript</span>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

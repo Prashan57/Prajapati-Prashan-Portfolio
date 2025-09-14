@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { ExternalLink, Github, Eye } from "lucide-react";
-import { projects } from "@/constants/site";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { projects } from "@/constants/site";
+import { AnimatePresence, motion } from "framer-motion";
+import { ExternalLink, Eye, Github } from "lucide-react";
+import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export function Projects() {
   const [ref, inView] = useInView({
@@ -195,7 +195,7 @@ export function Projects() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="flex items-center gap-2"
+              className="flex items-center justify-center gap-2"
             >
               <ExternalLink className="h-5 w-5" />
               Get In Touch

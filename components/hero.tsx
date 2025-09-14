@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail } from "lucide-react";
-import { siteConfig } from "@/constants/site";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/constants/site";
+import { motion } from "framer-motion";
+import { Download, Mail } from "lucide-react";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -133,14 +133,14 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="absolute bottom-8 left-1/2 -translate-x-1/2 transform"
           >
-            <motion.div
+            {/* <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="flex flex-col items-center gap-2 text-muted-foreground"
             >
               <span className="text-sm">Scroll to explore</span>
               <ArrowDown className="h-5 w-5" />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
 import { navigation } from "@/constants/site";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +56,7 @@ export function Navbar() {
                 scrollToSection("#home");
               }}
             >
-              JD
+              PP
             </a>
           </motion.div>
 

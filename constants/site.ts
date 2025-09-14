@@ -1,20 +1,20 @@
 export const siteConfig = {
-  name: "John Doe",
-  title: "Senior TypeScript/JavaScript Developer",
+  name: "Prashan Prajapati",
+  title: "Software Engineer | Full-Stack Developer",
   description:
-    "Full-stack developer specializing in modern web technologies with expertise in React, TypeScript, and Node.js",
+    "Full-stack developer specializing in modern web and app technologies with expertise in React, React Native, Flutter, TypeScript, Express.js, Hono, MongoDB, PostgresSQL and Node.js",
   url: "https://johndoe.dev",
   ogImage: "https://johndoe.dev/og.jpg",
   links: {
-    twitter: "https://twitter.com/johndoe",
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    email: "john@johndoe.dev",
+    twitter: "https://x.com/pprashan_p",
+    github: "https://github.com/Prashan57",
+    linkedin: "https://www.linkedin.com/in/prashan-prajapati-b3a87a18b/",
+    email: "officialprashan@gmail.com",
   },
   contact: {
-    email: "john@johndoe.dev",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
+    email: "officialprashan@gmail.com",
+    phone: "+977 9860465706",
+    location: "Bhaktapur, Nepal",
   },
 } as const;
 
@@ -31,12 +31,12 @@ export const skills = [
   {
     category: "Frontend",
     items: [
-      { name: "JavaScript", icon: "js", level: 95 },
-      { name: "TypeScript", icon: "ts", level: 90 },
-      { name: "React", icon: "react", level: 92 },
+      { name: "JavaScript", icon: "js", level: 90 },
+      { name: "TypeScript", icon: "ts", level: 85 },
+      { name: "React", icon: "react", level: 90 },
       { name: "Next.js", icon: "nextjs", level: 88 },
       { name: "Tailwind CSS", icon: "tailwind", level: 85 },
-      { name: "HTML/CSS", icon: "html", level: 90 },
+      { name: "HTML/CSS", icon: "html", level: 95 },
     ],
   },
   {
@@ -45,8 +45,8 @@ export const skills = [
       { name: "Node.js", icon: "nodejs", level: 88 },
       { name: "Express", icon: "express", level: 85 },
       { name: "PostgreSQL", icon: "postgresql", level: 80 },
-      { name: "MongoDB", icon: "mongodb", level: 75 },
-      { name: "GraphQL", icon: "graphql", level: 82 },
+      { name: "MongoDB", icon: "mongodb", level: 80 },
+      // { name: "GraphQL", icon: "graphql", level: 82 },
     ],
   },
   {
@@ -54,9 +54,9 @@ export const skills = [
     items: [
       { name: "Git", icon: "git", level: 90 },
       { name: "Docker", icon: "docker", level: 75 },
-      { name: "AWS", icon: "aws", level: 70 },
-      { name: "Figma", icon: "figma", level: 65 },
-      { name: "Jest", icon: "jest", level: 85 },
+      // { name: "AWS", icon: "aws", level: 70 },
+      { name: "Figma", icon: "figma", level: 63 },
+      // { name: "Jest", icon: "jest", level: 85 },
     ],
   },
 ] as const;
@@ -178,12 +178,12 @@ export const testimonials = [
 ] as const;
 
 export const socialLinks = [
-  { name: "GitHub", url: "https://github.com/johndoe", icon: "github" },
+  { name: "GitHub", url: "https://github.com/Prashan57", icon: "github" },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/johndoe",
+    url: "https://www.linkedin.com/in/prashan-prajapati-b3a87a18b/",
     icon: "linkedin",
   },
-  { name: "Twitter", url: "https://twitter.com/johndoe", icon: "twitter" },
-  { name: "Email", url: "mailto:john@johndoe.dev", icon: "mail" },
+  { name: "Twitter", url: "https://x.com/pprashan_p", icon: "twitter" },
+  { name: "Email", url: "mailto:officialprashan@gmail.com", icon: "mail" },
 ] as const;

@@ -1,9 +1,9 @@
 "use client";
 
+import { Card } from "@/components/ui/card";
+import { siteConfig } from "@/constants/site";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { siteConfig } from "@/constants/site";
-import { Card } from "@/components/ui/card";
 
 export function About() {
   const [ref, inView] = useInView({
@@ -43,10 +43,10 @@ export function About() {
               </h3>
               <div className="space-y-6 text-muted-foreground">
                 <p className="leading-relaxed">
-                  I'm a senior full-stack developer with over 5 years of
-                  experience in building scalable web applications. My passion
-                  lies in creating elegant, performant, and user-friendly
-                  solutions that solve real-world problems.
+                  I'm a full-stack developer with years of experience in
+                  building scalable web and native applications. My passion lies
+                  in creating elegant, performant, and user-friendly solutions
+                  that solve real-world problems.
                 </p>
                 <p className="leading-relaxed">
                   I specialize in modern JavaScript frameworks, particularly
@@ -55,9 +55,8 @@ export function About() {
                   to backend development with Node.js and various databases.
                 </p>
                 <p className="leading-relaxed">
-                  When I'm not coding, you can find me contributing to
-                  open-source projects, writing technical blog posts, or
-                  exploring new technologies to stay ahead of the curve.
+                  When I'm not coding, you can find me exploring new
+                  technologies to stay ahead of the curve.
                 </p>
               </div>
             </Card>
@@ -106,7 +105,7 @@ export function About() {
                   transition={{ duration: 0.5, delay: 0.6 }}
                   className="mb-2 text-3xl font-bold text-primary"
                 >
-                  5+
+                  1+
                 </motion.div>
                 <div className="text-sm text-muted-foreground">
                   Years Experience
@@ -119,7 +118,7 @@ export function About() {
                   transition={{ duration: 0.5, delay: 0.7 }}
                   className="mb-2 text-3xl font-bold text-primary"
                 >
-                  50+
+                  15+
                 </motion.div>
                 <div className="text-sm text-muted-foreground">
                   Projects Completed
@@ -132,7 +131,7 @@ export function About() {
                   transition={{ duration: 0.5, delay: 0.8 }}
                   className="mb-2 text-3xl font-bold text-primary"
                 >
-                  15+
+                  12+
                 </motion.div>
                 <div className="text-sm text-muted-foreground">
                   Technologies
@@ -145,7 +144,7 @@ export function About() {
                   transition={{ duration: 0.5, delay: 0.9 }}
                   className="mb-2 text-3xl font-bold text-primary"
                 >
-                  100%
+                  92%
                 </motion.div>
                 <div className="text-sm text-muted-foreground">
                   Client Satisfaction
