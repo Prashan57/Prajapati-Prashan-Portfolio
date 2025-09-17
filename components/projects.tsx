@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { projects } from "@/constants/site";
 import { AnimatePresence, motion } from "framer-motion";
-import { ExternalLink, Eye, Github } from "lucide-react";
+import { Icon } from "@/components/ui/icon";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -102,7 +102,7 @@ export function Projects() {
                         onClick={() => window.open(project.live, "_blank")}
                         className="flex items-center gap-2"
                       >
-                        <Eye className="h-4 w-4" />
+                        <Icon name="eye" className="h-4 w-4" />
                         Live Demo
                       </Button>
                       <Button
@@ -111,7 +111,7 @@ export function Projects() {
                         onClick={() => window.open(project.github, "_blank")}
                         className="flex items-center gap-2"
                       >
-                        <Github className="h-4 w-4" />
+                        <Icon name="github" className="h-4 w-4" />
                         Code
                       </Button>
                     </div>
@@ -152,7 +152,7 @@ export function Projects() {
                         onClick={() => window.open(project.live, "_blank")}
                         className="flex flex-1 items-center gap-2"
                       >
-                        <ExternalLink className="h-4 w-4" />
+                        <Icon name="external" className="h-4 w-4" />
                         Live Demo
                       </Button>
                       <Button
@@ -161,7 +161,7 @@ export function Projects() {
                         onClick={() => window.open(project.github, "_blank")}
                         className="flex items-center gap-2"
                       >
-                        <Github className="h-4 w-4" />
+                        <Icon name="github" className="h-4 w-4" />
                         Code
                       </Button>
                     </div>
@@ -197,8 +197,9 @@ export function Projects() {
               }}
               className="flex items-center justify-center gap-2"
             >
-              <ExternalLink className="h-5 w-5" />
-              Get In Touch
+              <Icon name="external" className="h-5 w-5" />
+              <span className="min-w-[8ch] text-center">Get In Touch</span>
+              <Icon name="external" className="h-5 w-5 opacity-0" />
             </Button>
           </Card>
         </motion.div>

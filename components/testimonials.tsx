@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Icon } from "@/components/ui/icon";
 import { testimonials } from "@/constants/site";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -62,7 +62,7 @@ export function Testimonials() {
               <Card className="bg-background/50 p-8 text-center backdrop-blur-sm md:p-12">
                 <div className="mb-6 flex justify-center">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                    <Quote className="h-8 w-8 text-primary" />
+                    <Icon name="quote" className="h-8 w-8 text-primary" />
                   </div>
                 </div>
 
@@ -93,7 +93,7 @@ export function Testimonials() {
               onClick={prevTestimonial}
               className="rounded-full"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <Icon name="chevron-left" className="h-4 w-4" />
             </Button>
 
             {/* Dots Indicator */}
@@ -115,7 +115,7 @@ export function Testimonials() {
               onClick={nextTestimonial}
               className="rounded-full"
             >
-              <ChevronRight className="h-4 w-4" />
+              <Icon name="chevron-right" className="h-4 w-4" />
             </Button>
           </div>
         </motion.div>

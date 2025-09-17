@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Prashan Prajapati",
   title: "Software Engineer | Full-Stack Developer",
   description:
-    "Full-stack developer specializing in modern web and app technologies with expertise in React, React Native, Flutter, TypeScript, Express.js, Hono, MongoDB, PostgresSQL and Node.js",
-  url: "https://johndoe.dev",
-  ogImage: "https://johndoe.dev/og.jpg",
+    "Full-stack developer specializing in modern web and app technologies with expertise in React, React Native, Flutter, TypeScript, Express.js, Hono, MongoDB, PostgreSQL and Node.js",
+  url: "https://prashan.dev",
+  ogImage: "https://prashan.dev/og.jpg",
   links: {
     twitter: "https://x.com/pprashan_p",
     github: "https://github.com/Prashan57",
@@ -75,8 +75,8 @@ export const projects = [
       "PostgreSQL",
       "Tailwind CSS",
     ],
-    github: "https://github.com/johndoe/ecommerce",
-    live: "https://ecommerce.johndoe.dev",
+    github: "https://github.com/Prashan57/ecommerce",
+    live: "https://ecommerce.prashan.dev",
     featured: true,
   },
   {
@@ -86,8 +86,8 @@ export const projects = [
       "A collaborative task management application with real-time updates",
     image: "/projects/taskapp.jpg",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-    github: "https://github.com/johndoe/taskapp",
-    live: "https://taskapp.johndoe.dev",
+    github: "https://github.com/Prashan57/taskapp",
+    live: "https://taskapp.prashan.dev",
     featured: true,
   },
   {
@@ -97,8 +97,8 @@ export const projects = [
       "A modern, responsive portfolio website with animations and dark mode",
     image: "/projects/portfolio.jpg",
     technologies: ["Next.js", "Framer Motion", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/johndoe/portfolio",
-    live: "https://johndoe.dev",
+    github: "https://github.com/Prashan57/portfolio",
+    live: "https://prashan.dev",
     featured: false,
   },
   {
@@ -108,8 +108,8 @@ export const projects = [
       "A weather dashboard with real-time data and interactive charts",
     image: "/projects/weather.jpg",
     technologies: ["React", "Chart.js", "OpenWeather API", "TypeScript"],
-    github: "https://github.com/johndoe/weather-dashboard",
-    live: "https://weather.johndoe.dev",
+    github: "https://github.com/Prashan57/weather-dashboard",
+    live: "https://weather.prashan.dev",
     featured: false,
   },
 ] as const;

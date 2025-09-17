@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { skills } from "@/constants/site";
 import { Card } from "@/components/ui/card";
+import { skillIconMap } from "@/components/ui/icon";
 
 export function Skills() {
   const [ref, inView] = useInView({
@@ -57,9 +58,16 @@ export function Skills() {
                       <div className="mb-4 flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                            <span className="text-lg font-bold text-primary">
-                              {skill.icon.toUpperCase()}
-                            </span>
+                            {(() => {
+                              const SkillIcon = skillIconMap[skill.icon] as any;
+                              return SkillIcon ? (
+                                <SkillIcon className="h-6 w-6 text-primary" />
+                              ) : (
+                                <span className="text-lg font-bold text-primary">
+                                  {skill.icon.toUpperCase()}
+                                </span>
+                              );
+                            })()}
                           </div>
                           <div>
                             <h4 className="font-semibold">{skill.name}</h4>

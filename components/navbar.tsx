@@ -3,14 +3,16 @@
 import { navigation } from "@/constants/site";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Icon } from "@/components/ui/icon";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,12 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -50,13 +58,20 @@ export function Navbar() {
           >
             <a
               href="#home"
-              className="gradient-text text-2xl font-bold"
+              className="inline-flex items-center"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("#home");
               }}
             >
-              PP
+              <Image
+                src="/profile.jpeg"
+                alt="Logo"
+                width={32}
+                height={32}
+                priority
+                className="h-8 w-8 rounded-lg"
+              />
             </a>
           </motion.div>
 
@@ -86,14 +101,18 @@ export function Navbar() {
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
             <motion.button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="rounded-lg bg-secondary p-2 transition-colors duration-200 hover:bg-secondary/80"
+              onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+              className="relative rounded-lg bg-secondary p-2 transition-colors duration-200 hover:bg-secondary/80"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Toggle theme"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
+              {mounted && (
+                <Icon
+                  name={currentTheme === "dark" ? "sun" : "moon"}
+                  className="h-5 w-5"
+                />
+              )}
             </motion.button>
 
             {/* Mobile menu button */}
@@ -105,9 +124,9 @@ export function Navbar() {
                 whileTap={{ scale: 0.95 }}
               >
                 {isOpen ? (
-                  <X className="h-6 w-6" />
+                  <Icon name="x" className="h-6 w-6" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Icon name="menu" className="h-6 w-6" />
                 )}
               </motion.button>
             </div>

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/constants/site";
 import { motion } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { Icon } from "@/components/ui/icon";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -103,7 +103,7 @@ export function Hero() {
               className="group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Mail className="h-5 w-5" />
+                <Icon name="mail" className="h-5 w-5" />
                 Get In Touch
               </span>
               <motion.div
@@ -120,7 +120,7 @@ export function Hero() {
               className="group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Download className="h-5 w-5" />
+                <Icon name="download" className="h-5 w-5" />
                 Download Resume
               </span>
             </Button>

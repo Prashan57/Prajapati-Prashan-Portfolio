@@ -6,15 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { Icon } from "@/components/ui/icon";
 import { siteConfig, socialLinks } from "@/constants/site";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -49,9 +41,15 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const payload = await res.json().catch(() => ({}));
+        throw new Error(payload.error || "Failed to send");
+      }
       toast.success("Message sent successfully! I'll get back to you soon.");
       reset();
     } catch (error) {
@@ -190,7 +188,7 @@ export function Contact() {
                     </>
                   ) : (
                     <>
-                      <Send className="h-4 w-4" />
+                      <Icon name="send" className="h-4 w-4" />
                       Send Message
                     </>
                   )}
@@ -212,7 +210,7 @@ export function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <Mail className="h-5 w-5 text-primary" />
+                    <Icon name="mail" className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
@@ -224,7 +222,7 @@ export function Contact() {
 
                 <div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <Phone className="h-5 w-5 text-primary" />
+                    <Icon name="phone" className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
@@ -236,7 +234,7 @@ export function Contact() {
 
                 <div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <MapPin className="h-5 w-5 text-primary" />
+                    <Icon name="map" className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
@@ -260,12 +258,7 @@ export function Contact() {
                     onClick={() => window.open(link.url, "_blank")}
                     className="h-12 w-12"
                   >
-                    {link.name === "GitHub" && <Github className="h-5 w-5" />}
-                    {link.name === "LinkedIn" && (
-                      <Linkedin className="h-5 w-5" />
-                    )}
-                    {link.name === "Twitter" && <Twitter className="h-5 w-5" />}
-                    {link.name === "Email" && <Mail className="h-5 w-5" />}
+                    <Icon name={link.icon as any} className="h-5 w-5" />
                   </Button>
                 ))}
               </div>

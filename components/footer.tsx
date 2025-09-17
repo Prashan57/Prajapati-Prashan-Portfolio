@@ -2,7 +2,7 @@
 
 import { navigation, siteConfig, socialLinks } from "@/constants/site";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Icon } from "@/components/ui/icon";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -44,10 +44,11 @@ export function Footer() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {link.name === "GitHub" && <Github className="h-5 w-5" />}
-                  {link.name === "LinkedIn" && <Linkedin className="h-5 w-5" />}
-                  {link.name === "Twitter" && <Twitter className="h-5 w-5" />}
-                  {link.name === "Email" && <Mail className="h-5 w-5" />}
+                  <Icon
+                    name={link.icon as any}
+                    className="h-5 w-5"
+                    aria-label={link.name}
+                  />
                 </motion.a>
               ))}
             </div>
