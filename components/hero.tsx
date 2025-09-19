@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/constants/site";
+import { siteConfig, myResume } from "@/constants/site";
 import { motion } from "framer-motion";
 import { Icon } from "@/components/ui/icon";
 
@@ -121,7 +121,7 @@ export function Hero() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Icon name="download" className="h-5 w-5" />
-                Download Resume
+               <a href={myResume} download> Download Resume</a>
               </span>
             </Button>
           </motion.div>
@@ -146,7 +146,7 @@ export function Hero() {
       </div>
 
       {/* Tech Stack Preview */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
@@ -170,7 +170,7 @@ export function Hero() {
             )}
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

@@ -18,6 +18,9 @@ export const siteConfig = {
   },
 } as const;
 
+// export const myResume = "https://www.overleaf.com/download/project/678784d9b49d21bef5ccdb3a/build/19961809e15-80df8d5a42cc0ff7/output/output.pdf?compileGroup=standard&clsiserverid=clsi-reg-n2d-b-f-bnxs&enable_pdf_caching=true&popupDownload=true"
+export const myResume = "/resume.pdf"
+
 export const navigation = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -65,54 +68,55 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "EdEarn",
     description:
-      "A full-stack e-commerce platform built with Next.js, TypeScript, and Stripe integration",
+    " Crafted a real-time gaming platform enabling point redemption and subscription purchases through Khalti integration, enhancing user engagement and accessibility. This innovation aims to redefine the gaming landscape by combining entertainment, rewards, and convenience for users.",
     image: "/projects/ecommerce.jpg",
     technologies: [
       "Next.js",
       "TypeScript",
-      "Stripe",
-      "PostgreSQL",
+      "Khalti",
+      "MongoDB",
+      "Express",
       "Tailwind CSS",
     ],
-    github: "https://github.com/Prashan57/ecommerce",
-    live: "https://ecommerce.prashan.dev",
+    github: "https://github.com/Prashan57/EdEarn.git",
+    live: "https://github.com/Prashan57/EdEarn.git",
     featured: true,
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "Envision Nepal",
     description:
-      "A collaborative task management application with real-time updates",
+    " Designed a procurement website with a simplified user interface, prioritizing intuitive navigation. Leveraging modern web design principles, users can effortlessly navigate the platform for streamlined procurement processes.",
     image: "/projects/taskapp.jpg",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-    github: "https://github.com/Prashan57/taskapp",
-    live: "https://taskapp.prashan.dev",
+    github: "https://github.com/Prashan57/Envision-Nepal.git",
+    live: "https://github.com/Prashan57/Envision-Nepal.git",
     featured: true,
   },
   {
     id: 3,
-    title: "Portfolio Website",
+    title: "Chat App",
     description:
       "A modern, responsive portfolio website with animations and dark mode",
     image: "/projects/portfolio.jpg",
-    technologies: ["Next.js", "Framer Motion", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/Prashan57/portfolio",
-    live: "https://prashan.dev",
+    technologies: ["HTML", "CSS", "JavaScript", "Socket.io","Node.js","Express"],
+    github: "https://github.com/Prashan57/Nodejs-Chat-App.git",
+    live: "https://github.com/Prashan57/Nodejs-Chat-App.git",
     featured: false,
   },
-  {
-    id: 4,
-    title: "Weather Dashboard",
-    description:
-      "A weather dashboard with real-time data and interactive charts",
-    image: "/projects/weather.jpg",
-    technologies: ["React", "Chart.js", "OpenWeather API", "TypeScript"],
-    github: "https://github.com/Prashan57/weather-dashboard",
-    live: "https://weather.prashan.dev",
-    featured: false,
-  },
+  // {
+  //   id: 4,
+  //   title: "Weather Dashboard",
+  //   description:
+  //     "A weather dashboard with real-time data and interactive charts",
+  //   image: "/projects/weather.jpg",
+  //   technologies: ["React", "Chart.js", "OpenWeather API", "TypeScript"],
+  //   github: "https://github.com/Prashan57/weather-dashboard",
+  //   live: "https://weather.prashan.dev",
+  //   featured: false,
+  // },
 ] as const;
 
 export const experience = [
