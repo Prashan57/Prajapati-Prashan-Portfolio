@@ -83,7 +83,7 @@ export const projects = [
     github: "https://github.com/Prashan57/EdEarn.git",
     live: "https://github.com/Prashan57/EdEarn.git",
     liveStatus: false,
-    featured: true,
+    featured: false,
   },
   {
     id: 2,
@@ -95,7 +95,7 @@ export const projects = [
     github: "https://github.com/Prashan57/Envision-Nepal.git",
     live: "https://github.com/Prashan57/Envision-Nepal.git",
     liveStatus: false,
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -126,7 +126,7 @@ export const projects = [
     github: "https://github.com/Prashan57/Pomodoro",
     live: "https://pomodorororo.netlify.app/",
     liveStatus: true,
-    featured: false,
+    featured: true,
   },
   {
     id: 5,
@@ -137,7 +137,7 @@ export const projects = [
     github: "https://github.com/Prashan57/Homepage",
     live: "https://prashanprajapat.netlify.app/",
     liveStatus: true,
-    featured: false,
+    featured: true,
   },
   {
     id: 6,
@@ -148,7 +148,7 @@ export const projects = [
     github: "https://github.com/Prashan57/prashanprajapati",
     live: "http://prashan.com.np/",
     liveStatus: true,
-    featured: false,
+    featured: true,
   },
 ] as const;
 
