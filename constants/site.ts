@@ -19,7 +19,7 @@ export const siteConfig = {
 } as const;
 
 // export const myResume = "https://www.overleaf.com/download/project/678784d9b49d21bef5ccdb3a/build/19961809e15-80df8d5a42cc0ff7/output/output.pdf?compileGroup=standard&clsiserverid=clsi-reg-n2d-b-f-bnxs&enable_pdf_caching=true&popupDownload=true"
-export const myResume = "/resume.pdf"
+export const myResume = "/resume.pdf";
 
 export const navigation = [
   { name: "Home", href: "#home" },
@@ -70,7 +70,7 @@ export const projects = [
     id: 1,
     title: "EdEarn",
     description:
-    " Crafted a real-time gaming platform enabling point redemption and subscription purchases through Khalti integration, enhancing user engagement and accessibility. This innovation aims to redefine the gaming landscape by combining entertainment, rewards, and convenience for users.",
+      " Crafted a real-time gaming platform enabling point redemption and subscription purchases through Khalti integration, enhancing user engagement and accessibility. This innovation aims to redefine the gaming landscape by combining entertainment, rewards, and convenience for users.",
     image: "/projects/ecommerce.jpg",
     technologies: [
       "Next.js",
@@ -82,19 +82,19 @@ export const projects = [
     ],
     github: "https://github.com/Prashan57/EdEarn.git",
     live: "https://github.com/Prashan57/EdEarn.git",
-    liveStatus:false,
+    liveStatus: false,
     featured: true,
   },
   {
     id: 2,
     title: "Envision Nepal",
     description:
-    " Designed a procurement website with a simplified user interface, prioritizing intuitive navigation. Leveraging modern web design principles, users can effortlessly navigate the platform for streamlined procurement processes.",
+      " Designed a procurement website with a simplified user interface, prioritizing intuitive navigation. Leveraging modern web design principles, users can effortlessly navigate the platform for streamlined procurement processes.",
     image: "/projects/taskapp.jpg",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
     github: "https://github.com/Prashan57/Envision-Nepal.git",
     live: "https://github.com/Prashan57/Envision-Nepal.git",
-    liveStatus:false,
+    liveStatus: false,
     featured: true,
   },
   {
@@ -103,10 +103,17 @@ export const projects = [
     description:
       "A modern, responsive portfolio website with animations and dark mode",
     image: "/projects/portfolio.jpg",
-    technologies: ["HTML", "CSS", "JavaScript", "Socket.io","Node.js","Express"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Socket.io",
+      "Node.js",
+      "Express",
+    ],
     github: "https://github.com/Prashan57/Nodejs-Chat-App.git",
     live: "https://github.com/Prashan57/Nodejs-Chat-App.git",
-    liveStatus:false,
+    liveStatus: false,
     featured: false,
   },
   {
@@ -118,7 +125,30 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Prashan57/Pomodoro",
     live: "https://pomodorororo.netlify.app/",
-    liveStatus:true,
+    liveStatus: true,
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Portfolio Template",
+    description: "Simple portfolio template built with React and Tailwind CSS.",
+    image: "/projects/weather.jpg",
+    technologies: ["React", "Tailwind CSS"],
+    github: "https://github.com/Prashan57/Homepage",
+    live: "https://prashanprajapat.netlify.app/",
+    liveStatus: true,
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Portfolio Template 2",
+    description:
+      "A timer app which helps you get focus and rest in a systematic order.",
+    image: "/projects/weather.jpg",
+    technologies: ["React", "Tailwind CSS"],
+    github: "https://github.com/Prashan57/prashanprajapati",
+    live: "http://prashan.com.np/",
+    liveStatus: true,
     featured: false,
   },
 ] as const;
@@ -140,9 +170,7 @@ export const experience = [
     duration: "Dec 16 2024 - May 15 2025",
     description:
       "Built responsive user interfaces and implemented modern frontend architectures with optimized query and performance",
-    technologies: [
-      "SQL","HTML","CSS","JavaScript","Oracle Database"
-    ],
+    technologies: ["SQL", "HTML", "CSS", "JavaScript", "Oracle Database"],
   },
   {
     id: 3,
@@ -151,7 +179,15 @@ export const experience = [
     duration: "Nov 1 – Jan 1 2023",
     description:
       "Developed client websites and learned modern web development practices",
-    technologies: ["JavaScript", "React", "Next.js", "Node.js", "MongoDB", "Express", "Django"],
+    technologies: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Django",
+    ],
   },
 ] as const;
 
