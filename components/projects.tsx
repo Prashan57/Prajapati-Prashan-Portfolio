@@ -146,7 +146,7 @@ export function Projects() {
 
                     {/* Action Buttons */}
                     <div className="flex gap-2">
-                      {/* <Button
+                      {project.liveStatus && <Button
                         size="sm"
                         variant="outline"
                         onClick={() => window.open(project.live, "_blank")}
@@ -154,7 +154,7 @@ export function Projects() {
                       >
                         <Icon name="external" className="h-4 w-4" />
                         Live Demo
-                      </Button> */}
+                      </Button>}
                       <Button
                         size="sm"
                         variant="ghost"

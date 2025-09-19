@@ -82,6 +82,7 @@ export const projects = [
     ],
     github: "https://github.com/Prashan57/EdEarn.git",
     live: "https://github.com/Prashan57/EdEarn.git",
+    liveStatus:false,
     featured: true,
   },
   {
@@ -93,6 +94,7 @@ export const projects = [
     technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
     github: "https://github.com/Prashan57/Envision-Nepal.git",
     live: "https://github.com/Prashan57/Envision-Nepal.git",
+    liveStatus:false,
     featured: true,
   },
   {
@@ -104,19 +106,21 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript", "Socket.io","Node.js","Express"],
     github: "https://github.com/Prashan57/Nodejs-Chat-App.git",
     live: "https://github.com/Prashan57/Nodejs-Chat-App.git",
+    liveStatus:false,
     featured: false,
   },
-  // {
-  //   id: 4,
-  //   title: "Weather Dashboard",
-  //   description:
-  //     "A weather dashboard with real-time data and interactive charts",
-  //   image: "/projects/weather.jpg",
-  //   technologies: ["React", "Chart.js", "OpenWeather API", "TypeScript"],
-  //   github: "https://github.com/Prashan57/weather-dashboard",
-  //   live: "https://weather.prashan.dev",
-  //   featured: false,
-  // },
+  {
+    id: 4,
+    title: "PomoFocus",
+    description:
+      "A timer app which helps you get focus and rest in a systematic order.",
+    image: "/projects/weather.jpg",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Prashan57/Pomodoro",
+    live: "https://pomodorororo.netlify.app/",
+    liveStatus:true,
+    featured: false,
+  },
 ] as const;
 
 export const experience = [
