@@ -1,16 +1,19 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { skills } from "@/constants/site";
 import { Card } from "@/components/ui/card";
 import { skillIconMap } from "@/components/ui/icon";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function Skills() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+  const [showAdditional, setShowAdditional] = useState(false);
 
   return (
     <section id="skills" className="py-20">
@@ -106,56 +109,71 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Additional Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-20"
-        >
-          <h3 className="mb-8 text-center text-2xl font-bold">
-            Additional Skills
-          </h3>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
-            {[
-              "Git",
-              "Docker",
-              "AWS",
-              "CI/CD",
-              "REST APIs",
-              "GraphQL",
-              "Jest",
-              "Cypress",
-              "Storybook",
-              "Webpack",
-              "Vite",
-              "ESLint",
-              "Prettier",
-              "Husky",
-              "TypeScript",
-              "JavaScript",
-              "HTML",
-              "CSS",
-              "SASS",
-              "Tailwind",
-              "Bootstrap",
-              "Material-UI",
-              "Ant Design",
-            ].map((skill, index) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: 0.8 + index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Card className="bg-background/50 p-4 text-center backdrop-blur-sm">
-                  <span className="text-sm font-medium">{skill}</span>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        {/* Additional Skills Toggle */}
+        <div className="mt-20 text-center">
+          <Button
+            variant={showAdditional ? "outline" : "default"}
+            onClick={() => setShowAdditional((v) => !v)}
+            className="mx-auto"
+          >
+            {showAdditional ? "Hide additional skills" : "Show all skills"}
+          </Button>
+        </div>
+
+        <AnimatePresence initial={false}>
+          {showAdditional && (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.4 }}
+              className="mt-10"
+            >
+              <h3 className="mb-8 text-center text-2xl font-bold">
+                Additional Skills
+              </h3>
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
+                {[
+                  "Git",
+                  "Docker",
+                  "AWS",
+                  "CI/CD",
+                  "REST APIs",
+                  "GraphQL",
+                  "Jest",
+                  "Cypress",
+                  "Storybook",
+                  "Webpack",
+                  "Vite",
+                  "ESLint",
+                  "Prettier",
+                  "Husky",
+                  "TypeScript",
+                  "JavaScript",
+                  "HTML",
+                  "CSS",
+                  "SASS",
+                  "Tailwind",
+                  "Bootstrap",
+                  "Material-UI",
+                  "Ant Design",
+                ].map((skill, index) => (
+                  <motion.div
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Card className="bg-background/50 p-4 text-center backdrop-blur-sm">
+                      <span className="text-sm font-medium">{skill}</span>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Learning Section */}
         <motion.div

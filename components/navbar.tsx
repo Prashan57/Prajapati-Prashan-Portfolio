@@ -29,6 +29,18 @@ export function Navbar() {
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
+  useEffect(() => {
+    // Lock body scroll when mobile menu is open
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -137,31 +149,55 @@ export function Navbar() {
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="border-b border-border bg-background/95 backdrop-blur-md md:hidden"
-          >
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item, index) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors duration-200 hover:bg-secondary hover:text-foreground"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+          <>
+            {/* Backdrop */}
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+            {/* Fullscreen menu */}
+            <motion.div
+              key="menu"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.25 }}
+              className="fixed inset-y-0 right-0 z-50 w-5/6 max-w-sm overflow-y-auto border-l border-border bg-background/95 p-4 backdrop-blur-md md:hidden"
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <span className="text-lg font-semibold">Menu</span>
+                <button
+                  aria-label="Close menu"
+                  className="rounded-lg bg-secondary p-2"
+                  onClick={() => setIsOpen(false)}
                 >
-                  {item.name}
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
+                  <Icon name="x" className="h-6 w-6" />
+                </button>
+              </div>
+              <div className="space-y-1">
+                {navigation.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    className="block rounded-md px-3 py-3 text-base font-medium text-foreground/90 transition-colors duration-200 hover:bg-secondary hover:text-foreground"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>

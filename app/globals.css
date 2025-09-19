@@ -53,6 +53,9 @@
 }
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
   * {
     @apply border-border;
   }
@@ -61,6 +64,7 @@
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+    overflow-x: hidden;
   }
 }
 

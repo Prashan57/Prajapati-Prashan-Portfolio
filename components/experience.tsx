@@ -32,7 +32,7 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute bottom-0 left-4 top-0 w-0.5 bg-gradient-to-b from-primary via-purple-600 to-secondary md:left-1/2 md:-translate-x-1/2 md:transform" />
+          <div className="absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-primary via-purple-600 to-secondary md:left-1/2 md:-translate-x-1/2 md:transform" />
 
           <div className="space-y-12">
             {experience.map((exp, index) => (
@@ -46,7 +46,7 @@ export function Experience() {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 z-10 h-4 w-4 rounded-full border-4 border-background bg-primary md:left-1/2 md:-translate-x-1/2 md:transform" />
+                <div className="absolute left-6 z-10 h-4 w-4 rounded-full border-4 border-background bg-primary md:left-1/2 md:-translate-x-1/2" />
 
                 {/* Content */}
                 <div

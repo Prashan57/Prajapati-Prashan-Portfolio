@@ -150,7 +150,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="absolute bottom-20 left-1/2 -translate-x-1/2 transform"
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 transform hidden sm:block"
       >
         <div className="flex items-center gap-4 text-muted-foreground">
           <span className="text-sm">Tech Stack:</span>
