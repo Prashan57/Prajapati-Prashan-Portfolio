@@ -142,8 +142,7 @@ export const projects = [
   {
     id: 6,
     title: "Portfolio Template 2",
-    description:
-      "A timer app which helps you get focus and rest in a systematic order.",
+    description: "Portfolio template to showcase projects and skills",
     image: "/projects/weather.jpg",
     technologies: ["React", "Tailwind CSS"],
     github: "https://github.com/Prashan57/prashanprajapati",
