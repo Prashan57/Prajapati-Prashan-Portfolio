@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Prashan Prajapati",
-  title: "Software Engineer | Full-Stack Developer",
+  title: "Software Engineer",
   description:
     "Full-stack developer specializing in modern web and app technologies with expertise in React, React Native, Flutter, TypeScript, Express.js, Hono, MongoDB, PostgreSQL and Node.js",
   url: "https://prashan.dev",
