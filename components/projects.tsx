@@ -179,7 +179,7 @@ export function Projects() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <Card className="border-primary/20 bg-gradient-to-r from-primary/10 to-purple-600/10 p-8">
+          <Card className="border-primary/20 bg-gradient-to-r from-primary/10 to-purple-600/10 p-8 text-center">
             <h3 className="mb-4 text-2xl font-bold">
               Interested in Working Together?
             </h3>
@@ -195,11 +195,11 @@ export function Projects() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="flex items-center justify-center gap-2"
+              className="mx-auto grid grid-cols-3 items-center gap-2"
             >
-              <Icon name="external" className="h-5 w-5" />
-              <span className="min-w-[8ch] text-center">Get In Touch</span>
-              <Icon name="external" className="h-5 w-5 opacity-0" />
+              <Icon name="external" className="h-5 w-5 justify-self-start" />
+              <span className="text-center justify-self-center">Get In Touch</span>
+              <Icon name="external" className="h-5 w-5 opacity-0 justify-self-end" />
             </Button>
           </Card>
         </motion.div>

@@ -35,6 +35,7 @@ import {
   SiGit,
   SiDocker,
   SiFigma,
+  SiPostman,
 } from "react-icons/si";
 
 const iconMap = {
@@ -84,6 +85,7 @@ export const skillIconMap: Record<string, React.ComponentType<any>> = {
   git: SiGit,
   docker: SiDocker,
   figma: SiFigma,
+  postman: SiPostman,
 };
 
 

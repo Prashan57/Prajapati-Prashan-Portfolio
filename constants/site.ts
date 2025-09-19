@@ -44,7 +44,7 @@ export const skills = [
     items: [
       { name: "Node.js", icon: "nodejs", level: 88 },
       { name: "Express", icon: "express", level: 85 },
-      { name: "PostgreSQL", icon: "postgresql", level: 80 },
+      { name: "PostgreSQL", icon: "postgresql", level: 68 },
       { name: "MongoDB", icon: "mongodb", level: 80 },
       // { name: "GraphQL", icon: "graphql", level: 82 },
     ],
@@ -53,9 +53,10 @@ export const skills = [
     category: "Tools & Others",
     items: [
       { name: "Git", icon: "git", level: 90 },
-      { name: "Docker", icon: "docker", level: 75 },
+      // { name: "Docker", icon: "docker", level: 75 },
       // { name: "AWS", icon: "aws", level: 70 },
       { name: "Figma", icon: "figma", level: 63 },
+      { name: "Postman", icon: "postman", level: 63 },
       // { name: "Jest", icon: "jest", level: 85 },
     ],
   },
@@ -117,36 +118,32 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    company: "TechCorp Inc.",
-    position: "Senior Full-Stack Developer",
-    duration: "2022 - Present",
+    company: "Acme IT",
+    position: "Full-Stack Developer",
+    duration: "Present",
     description:
       "Leading development of scalable web applications using React, Node.js, and cloud technologies",
-    technologies: ["React", "Node.js", "AWS", "TypeScript", "PostgreSQL"],
+    technologies: ["React", "Node.js", "Next.js", "TypeScript", "PostgreSQL"],
   },
   {
     id: 2,
-    company: "StartupXYZ",
-    position: "Frontend Developer",
-    duration: "2020 - 2022",
+    company: "CAS Total Solution",
+    position: "SQL + Frontend Developer",
+    duration: "Dec 16 2024 - May 15 2025",
     description:
-      "Built responsive user interfaces and implemented modern frontend architectures",
+      "Built responsive user interfaces and implemented modern frontend architectures with optimized query and performance",
     technologies: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
+      "SQL","HTML","CSS","JavaScript","Oracle Database"
     ],
   },
   {
     id: 3,
-    company: "Digital Agency",
-    position: "Junior Developer",
-    duration: "2018 - 2020",
+    company: "Qwik IT Services",
+    position: "Frontend Engineer",
+    duration: "Nov 1 – Jan 1 2023",
     description:
       "Developed client websites and learned modern web development practices",
-    technologies: ["JavaScript", "React", "Node.js", "MongoDB", "Express"],
+    technologies: ["JavaScript", "React", "Next.js", "Node.js", "MongoDB", "Express", "Django"],
   },
 ] as const;
 

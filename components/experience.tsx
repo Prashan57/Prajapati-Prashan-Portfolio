@@ -99,22 +99,22 @@ export function Experience() {
           className="mt-20"
         >
           <h3 className="mb-12 text-center text-2xl font-bold">Education</h3>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-1">
             {[
               {
-                degree: "Bachelor of Science in Computer Science",
-                school: "University of Technology",
-                year: "2018",
+                degree: "Bachelor of Science in Computer Science and Information Technology",
+                school: "Tribhuvan University",
+                year: "2023",
                 description:
-                  "Graduated with honors, focusing on software engineering and web development.",
+                  "Graduated with honors, focusing on software engineering and web + app development.",
               },
-              {
-                degree: "Full-Stack Web Development",
-                school: "Coding Bootcamp",
-                year: "2019",
-                description:
-                  "Intensive program covering modern web technologies and best practices.",
-              },
+              // {
+              //   degree: "Full-Stack Web Development",
+              //   school: "Coding Bootcamp",
+              //   year: "2019",
+              //   description:
+              //     "Intensive program covering modern web technologies and best practices.",
+              // },
             ].map((edu, index) => (
               <motion.div
                 key={edu.degree}
@@ -151,26 +151,20 @@ export function Experience() {
           <h3 className="mb-12 text-center text-2xl font-bold">
             Certifications
           </h3>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {[
               {
-                name: "AWS Certified Developer",
-                issuer: "Amazon Web Services",
-                year: "2023",
-                icon: "☁️",
+                name: "Red Hat Enterprise Linux",
+                issuer: "CAS Total Solution",
+                year: "2024",
+                icon: "💻",
+              }, {
+                name: "SQL Developer",
+                issuer: "CAS Total Solution",
+                year: "2024",
+                icon: "⛃",
               },
-              {
-                name: "React Developer Certification",
-                issuer: "Meta",
-                year: "2022",
-                icon: "⚛️",
-              },
-              {
-                name: "TypeScript Professional",
-                issuer: "Microsoft",
-                year: "2021",
-                icon: "📘",
-              },
+            
             ].map((cert, index) => (
               <motion.div
                 key={cert.name}

@@ -50,9 +50,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error: any) {
-    console.error("Contact API error", error);
+    // Log detailed error to server console for debugging
+    const message = error?.message || "Unknown error";
+    const details = error?.response || error?.data || undefined;
+    console.error("Contact API error:", message, details ?? "");
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: "Failed to send message", message },
       { status: 500 }
     );
   }

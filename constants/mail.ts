@@ -1,9 +1,11 @@
 export const mailtrapConfig = {
-  token: process.env.MAILTRAP_TOKEN ?? "",
-  senderEmail: process.env.MAILTRAP_SENDER_EMAIL ?? "",
-  senderName: process.env.MAILTRAP_SENDER_NAME ?? "Portfolio Contact",
+  // Mailtrap Send API token provided via env
+  token: process.env.MAILTRAP_TOKEN ?? "12f7cc9bf1af8304946157801dacb676",
+  // Defaults aligned with Mailtrap Send API sample
+  senderEmail: process.env.MAILTRAP_SENDER_EMAIL ?? "hello@demomailtrap.co",
+  senderName: process.env.MAILTRAP_SENDER_NAME ?? "Mailtrap - Prashan Portfolio",
   // Where contact form messages will be delivered (usually your inbox)
-  recipientEmail: process.env.MAILTRAP_RECIPIENT_EMAIL ?? "",
+  recipientEmail: process.env.MAILTRAP_RECIPIENT_EMAIL ?? "pprashan8@gmail.com",
 } as const;
 
 export function assertMailtrapEnv(): void {

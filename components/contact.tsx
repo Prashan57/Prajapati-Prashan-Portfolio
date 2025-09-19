@@ -48,12 +48,14 @@ export function Contact() {
       });
       if (!res.ok) {
         const payload = await res.json().catch(() => ({}));
-        throw new Error(payload.error || "Failed to send");
+        const serverMessage = payload?.message || payload?.error;
+        throw new Error(serverMessage || "Failed to send");
       }
       toast.success("Message sent successfully! I'll get back to you soon.");
       reset();
     } catch (error) {
-      toast.error("Failed to send message. Please try again.");
+      const message = error instanceof Error ? error.message : "Failed to send";
+      toast.error(message || "Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
