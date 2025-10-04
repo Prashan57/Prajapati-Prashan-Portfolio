@@ -70,7 +70,7 @@ export const projects = [
     id: 1,
     title: "EdEarn",
     description:
-      " Crafted a real-time gaming platform enabling point redemption and subscription purchases through Khalti integration, enhancing user engagement and accessibility. This innovation aims to redefine the gaming landscape by combining entertainment, rewards, and convenience for users.",
+      " Crafted a real-time gaming platform enabling point redemption and subscription purchases through Khalti integration, enhancing user engagement and accessibility.",
     image: "/projects/ecommerce.jpg",
     technologies: [
       "Next.js",
@@ -89,7 +89,7 @@ export const projects = [
     id: 2,
     title: "Envision Nepal",
     description:
-      " Designed a procurement website with a simplified user interface, prioritizing intuitive navigation. Leveraging modern web design principles, users can effortlessly navigate the platform for streamlined procurement processes.",
+      "Leveraging modern web design principles, users can effortlessly navigate the platform for streamlined procurement processes.",
     image: "/projects/taskapp.jpg",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
     github: "https://github.com/Prashan57/Envision-Nepal.git",
