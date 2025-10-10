@@ -59,7 +59,7 @@ export const skills = [
       // { name: "Docker", icon: "docker", level: 75 },
       // { name: "AWS", icon: "aws", level: 70 },
       { name: "Figma", icon: "figma", level: 63 },
-      { name: "Postman", icon: "postman", level: 63 },
+      { name: "Postman", icon: "postman", level: 88 },
       // { name: "Jest", icon: "jest", level: 85 },
     ],
   },

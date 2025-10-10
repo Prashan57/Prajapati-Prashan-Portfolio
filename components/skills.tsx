@@ -1,12 +1,12 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { skills } from "@/constants/site";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { skillIconMap } from "@/components/ui/icon";
+import { skills } from "@/constants/site";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useInView } from "react-intersection-observer";
 
 export function Skills() {
   const [ref, inView] = useInView({
@@ -169,7 +169,7 @@ export function Skills() {
         </AnimatePresence>
 
         {/* Learning Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
@@ -185,8 +185,8 @@ export function Skills() {
               <div className="flex flex-wrap justify-center gap-4">
                 {[
                   { name: "Rust", level: "Beginner" },
-                  { name: "WebAssembly", level: "Exploring" },
-                  { name: "Machine Learning", level: "Learning" },
+                  { name: "LLM", level: "Exploring" },
+                  { name: "Prompt Engineering", level: "Learning" },
                   { name: "Blockchain", level: "Researching" },
                 ].map((item, index) => (
                   <motion.div
@@ -205,7 +205,7 @@ export function Skills() {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
