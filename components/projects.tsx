@@ -13,7 +13,7 @@ export function Projects() {
     triggerOnce: true,
     threshold: 0.1,
   });
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("featured");
 
   const filteredProjects =
     filter === "all"
