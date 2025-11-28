@@ -66,11 +66,11 @@ export function Navbar() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex-shrink-0"
+            className="flex flex-shrink-0 items-center"
           >
             <a
               href="#home"
-              className="inline-flex items-center"
+              className="flex items-center"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("#home");
