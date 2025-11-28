@@ -150,6 +150,28 @@ export const projects = [
     liveStatus: true,
     featured: true,
   },
+    {
+    id: 7,
+    title: "Bhaktapur Wellness",
+    description: "An area to grow your health and wellness",
+    image: "/projects/weather.jpg",
+    technologies: ["React", "Tailwind CSS"],
+    github: "https://github.com/Prashan57/prashanprajapati",
+    live: "http://prashan.com.np/",
+    liveStatus: true,
+    featured: true,
+  },
+    {
+    id: 8,
+    title: "Sigma Planners",
+    description: "A platform designed to create architecture projects and manage them",
+    image: "/projects/weather.jpg",
+    technologies: ["React", "Tailwind CSS"],
+    github: "https://github.com/Prashan57/prashanprajapati",
+    live: "http://prashan.com.np/",
+    liveStatus: true,
+    featured: true,
+  },
 ] as const;
 
 export const experience = [
