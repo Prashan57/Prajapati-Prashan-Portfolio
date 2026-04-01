@@ -1,4 +1,4 @@
-# Modern Portfolio Website
+# Portfolio Website
 
 A top-tier, modern portfolio website built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and Framer Motion. This project showcases cutting-edge frontend engineering with a clean, scalable architecture and excellent UX/UI principles.
 
