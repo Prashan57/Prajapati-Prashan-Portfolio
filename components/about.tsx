@@ -105,7 +105,7 @@ export function About() {
                   transition={{ duration: 0.5, delay: 0.6 }}
                   className="mb-2 text-3xl font-bold text-primary"
                 >
-                  1+
+                  2+
                 </motion.div>
                 <div className="text-sm text-muted-foreground">
                   Years Experience
