@@ -177,38 +177,30 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    company: "Acme IT",
-    position: "Full-Stack Developer",
-    duration: "Present",
+    company: "AcmeIT",
+    position: "Full Stack Developer",
+    duration: "Currently Working",
     description:
-      "Leading development of scalable web applications using React, Node.js, and cloud technologies",
-    technologies: ["React", "Node.js", "Next.js", "TypeScript", "PostgreSQL"],
+      "Architected production-grade web apps using React Router v7, Node.js, TypeScript for enterprise workflows. Led end-to-end JS to TypeScript migration, reducing runtime type issues and developer defects by ~40%. Built modular RESTful APIs, cutting feature development time by ~30%.",
+    technologies: ["React", "Node.js", "TypeScript", "REST APIs"],
   },
   {
     id: 2,
     company: "CAS Total Solution",
-    position: "SQL + Frontend Developer",
-    duration: "Dec 16 2024 - May 15 2025",
+    position: "Software Engineer",
+    duration: "Dec 2024 - May 2025",
     description:
-      "Built responsive user interfaces and implemented modern frontend architectures with optimized query and performance",
-    technologies: ["SQL", "HTML", "CSS", "JavaScript", "Oracle Database"],
+      "Designed Finacle automation scripts with SQL for core banking workflows. Built backend logic for transaction processing, improving data handling and passing QA with no critical defects. Fixed 10+ system-level banking issues, enhancing production stability.",
+    technologies: ["SQL", "Finacle", "Banking Systems"],
   },
   {
     id: 3,
-    company: "Qwik IT Services",
-    position: "Frontend Engineer",
-    duration: "Nov 1 – Jan 1 2023",
+    company: "Keon Themes",
+    position: "Full Stack Developer",
+    duration: "2023 - 2024",
     description:
-      "Developed client websites and learned modern web development practices",
-    technologies: [
-      "JavaScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "Django",
-    ],
+      "Built responsive React.js interfaces from Figma designs. Developed scalable Node.js/Express.js backend services with modular architecture. Designed RESTful APIs with PostgreSQL.",
+    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Figma"],
   },
 ] as const;
 
